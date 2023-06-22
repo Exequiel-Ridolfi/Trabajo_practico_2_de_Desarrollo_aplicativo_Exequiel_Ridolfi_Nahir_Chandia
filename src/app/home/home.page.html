@@ -9,7 +9,7 @@
 <ion-content [fullscreen]="true">
   <ion-card  *ngFor="let pokemonindex of arraypokemon">
     <ion-card-header>
-      <ion-card-title>{{pokemonindex.name}}</ion-card-title>
+      <ion-card-title (click)="gotoinfo()">{{pokemonindex.name}}</ion-card-title>
     </ion-card-header>
   </ion-card>
 </ion-content>
