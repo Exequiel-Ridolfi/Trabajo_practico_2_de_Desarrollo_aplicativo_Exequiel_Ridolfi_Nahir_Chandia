@@ -7,9 +7,14 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-card  *ngFor="let pokemonindex of arraypokemon">
+  <ion-toolbar>
+    <ion-searchbar [(ngModel)]="textobuscar" (ionChange)="buscar()"
+      placeholder="BUSCAR POKEMON"></ion-searchbar>
+  </ion-toolbar>
+
+  <ion-card *ngFor="let pokemonindex of pokemonsFiltrados">
     <ion-card-header>
-      <ion-card-title (click)="gotoinfo()">{{pokemonindex.name}}</ion-card-title>
+      <ion-card-title (click)="gotoinfo()">{{ pokemonindex.name }}</ion-card-title>
     </ion-card-header>
   </ion-card>
 </ion-content>
